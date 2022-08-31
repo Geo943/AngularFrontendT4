@@ -1,0 +1,112 @@
+<script
+  src="https://kit.fontawesome.com/561f10f14e.js"
+  crossorigin="anonymous"
+></script>
+<div class="container">
+  <h1>Actualizar datos de cliente</h1>
+
+  <a href="#" routerLink="/post/index" class="btn btn-success"
+    ><i class="fa-solid fa-angles-left"> Back</i></a
+  >
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nombre:</label>
+      <input
+        formControlName="name"
+        id="name"
+        type="text"
+        [(ngModel)]="post.nombre"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['name'].touched && f['name'].invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f['name'].errors && f['name'].errors['required']">
+          El nombre es obligatorio.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastname">Apellido:</label>
+      <input
+        formControlName="lastname"
+        id="lastname"
+        type="text"
+        [(ngModel)]="post.apellido"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['lastname'].touched && f['lastname'].invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f['lastname'].errors && f['lastname'].errors['required']">
+          Title is required.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="cel">Telefono:</label>
+      <input
+        formControlName="cel"
+        id="cel"
+        type="number"
+        [(ngModel)]="post.pais"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['cel'].touched && f['cel'].invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f['cel'].errors && f['cel'].errors['required']">
+          Title is required.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        formControlName="email"
+        id="email"
+        type="text"
+        [(ngModel)]="post.departamento"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['email'].touched && f['email'].invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f['email'].errors && f['email'].errors['required']">
+          Title is required.
+        </div>
+      </div>
+    </div>
+
+    <!--<div class="form-group">
+      <label for="nit">NIT:</label>
+      <input
+        formControlName="nit"
+        id="nit"
+        type="number"
+        [(ngModel)]="post.nit"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['nit'].touched && f['nit'].invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f['nit'].errors && f['nit'].errors['required']">
+          Title is required.
+        </div>
+      </div>
+    </div>-->
+
+    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
+      Update
+    </button>
+  </form>
+</div>
