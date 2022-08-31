@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Create New Post</h1>
+  <h1>Creacion de nuevo Cliente</h1>
 
   <a href="#" routerLink="/post/index" class="btn btn-primary">Back</a>
 
@@ -42,11 +42,11 @@
     </div>
 
     <div class="form-group">
-      <label for="cel">Telefono</label>
+      <label for="cel">pais</label>
       <textarea
         formControlName="cel"
         id="cel"
-        type="number"
+        type="text"
         class="form-control"
       >
       </textarea>
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="email">Email</label>
+      <label for="email">departamento</label>
       <textarea
         formControlName="email"
         id="email"
@@ -77,26 +77,9 @@
         </div>
       </div>
     </div>
-    <div class="form-group">
-      <label for="nit">NIT</label>
-      <textarea
-        formControlName="nit"
-        id="nit"
-        type="number"
-        class="form-control"
-      >
-      </textarea>
-      <div
-        *ngIf="f['nit'].touched && f['nit'].invalid"
-        class="alert alert-danger"
-      >
-        <div *ngIf="f['nit'].errors && f['nit'].errors['required']">
-          Body is required.
-        </div>
-      </div>
-    </div>
+  <br>
 
-    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
+    <button class="btn btn-primary" type="submit" >
       Submit
     </button>
   </form>

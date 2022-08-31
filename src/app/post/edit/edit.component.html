@@ -3,7 +3,7 @@
   crossorigin="anonymous"
 ></script>
 <div class="container">
-  <h1>Actualizar datos de cliente</h1>
+  <h1>Actualizacion de datos del cliente</h1>
 
   <a href="#" routerLink="/post/index" class="btn btn-success"
     ><i class="fa-solid fa-angles-left"> Back</i></a
@@ -49,11 +49,11 @@
     </div>
 
     <div class="form-group">
-      <label for="cel">Telefono:</label>
+      <label for="cel">Pais:</label>
       <input
         formControlName="cel"
         id="cel"
-        type="number"
+        type="text"
         [(ngModel)]="post.pais"
         class="form-control"
       />
@@ -68,7 +68,7 @@
     </div>
 
     <div class="form-group">
-      <label for="email">Email:</label>
+      <label for="email">Departamento</label>
       <input
         formControlName="email"
         id="email"
@@ -104,8 +104,8 @@
         </div>
       </div>
     </div>-->
-
-    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
+    <br>
+    <button class="btn btn-primary" type="submit" routerLink="/post/submit()">
       Update
     </button>
   </form>
